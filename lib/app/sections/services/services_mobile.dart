@@ -5,11 +5,28 @@ class ServiceMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-
     return Column(
       children: [
-        const CustomSectionHeading(text: '\nWhat I can do?'),
+        const CustomSectionHeading(text: '\nEducation'),
+        Space.y(3.w)!,
+        EducationSection(
+          items: [
+            EducationItem(
+              title:
+                  '- Ingénierie en génie logiciel et informatique décisionnelle, Institut International de Technologie Sfax 2022 – présent',
+            ),
+            EducationItem(
+              title:
+                  '- Diplôme de licence en informatique et multimédia spécialité analyse de données et Big data, Institut supérieure d\'informatique et multimédia Sfax 2022',
+            ),
+            EducationItem(
+              title:
+                  '- Diplôme de Baccalauréat en Science expérimentale, Lycée Abou Kacem Chebbi Sfax 2017',
+            ),
+          ],
+        ),
+        Space.y(3.w)!,
+        const CustomSectionHeading(text: '\nProfile & Projects'),
         Space.y(3.w)!,
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.w),

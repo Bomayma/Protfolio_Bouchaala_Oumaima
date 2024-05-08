@@ -28,7 +28,7 @@ class _ServiceCardState extends State<_ServiceCard> {
         }
       },
       child: Container(
-        width: Responsive.isTablet(context) ? 400 : 300,
+        width: 300,
         // height: AppDimensions.normalize(100),
         padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
         decoration: BoxDecoration(
@@ -61,9 +61,10 @@ class _ServiceCardState extends State<_ServiceCard> {
               ),
             ),
             Space.y(2.w)!,
-            if (Responsive.isDesktop(context))
-              Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+            Expanded(
+              child: ListView(
+                  padding: EdgeInsets.zero,
+                  shrinkWrap: true,
                   children: widget.service.tool
                       .map((e) => Row(
                             children: [
@@ -76,25 +77,7 @@ class _ServiceCardState extends State<_ServiceCard> {
                             ],
                           ))
                       .toList()),
-            if (Responsive.isMobile(context) || Responsive.isTablet(context))
-              Expanded(
-                child: ListView(
-                    padding: EdgeInsets.zero,
-                    shrinkWrap: true,
-                    children: widget.service.tool
-                        .map((e) => Row(
-                              children: [
-                                const Text('🛠   '),
-                                Text(e,
-                                    style: TextStyle(
-                                      color: isHover
-                                          ? whiteColor
-                                          : theme.textColor,
-                                    )),
-                              ],
-                            ))
-                        .toList()),
-              )
+            )
           ],
         ),
       ),

@@ -18,8 +18,8 @@ class _MobileDrawer extends StatelessWidget {
               child: Column(
                 // crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Center(child: NavBarLogo()),
-                  const Divider(),
+                  //const Center(child: NavBarLogo()),
+                  //const Divider(),
                   ListTile(
                     leading: Icon(
                       state.isDarkThemeOn
@@ -62,13 +62,7 @@ class _MobileDrawer extends StatelessWidget {
                           ),
                         ),
                       ),
-                  Space.y(5.w)!,
-                  ColorChageButton(
-                    text: 'RESUME',
-                    onTap: () {
-                      openURL(resume);
-                    },
-                  ),
+                  Space.y(5.w)!
                 ],
               ),
             ),

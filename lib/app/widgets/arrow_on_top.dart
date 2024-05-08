@@ -14,6 +14,7 @@ class ArrowOnTop extends StatefulWidget {
 
 class ArrowOnTopState extends State<ArrowOnTop> {
   bool isHover = false;
+
   @override
   Widget build(BuildContext context) {
     final scrollProvider = Provider.of<ScrollProvider>(context);

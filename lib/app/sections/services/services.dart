@@ -5,11 +5,12 @@ import 'package:mysite/app/utils/services_utils.dart';
 import 'package:mysite/app/widgets/custom_text_heading.dart';
 import 'package:mysite/changes/strings.dart';
 import 'package:mysite/core/color/colors.dart';
-import 'package:mysite/core/res/responsive.dart';
 import 'package:mysite/core/configs/configs.dart';
+import 'package:mysite/core/res/responsive.dart';
 import 'package:sizer/sizer.dart';
 
-part 'services_desktop.dart';
+import '../../utils/educations_utils.dart';
+
 part 'services_mobile.dart';
 part 'widgets/_services_card.dart';
 
@@ -18,10 +19,6 @@ class Services extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Responsive(
-      mobile: ServiceMobile(),
-      tablet: ServiceMobile(),
-      desktop: ServiceDesktop(),
-    );
+    return const Responsive(mobile: ServiceMobile());
   }
 }

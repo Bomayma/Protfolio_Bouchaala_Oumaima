@@ -11,6 +11,7 @@ part 'connected_state.dart';
 
 class ConnectedBloc extends Bloc<ConnectedEvent, ConnectedState> {
   StreamSubscription? subscription;
+
   ConnectedBloc() : super(ConnectedInitialState()) {
     on<ConnectedEvent>((event, emit) => emit(ConnectedSucessState()));
     on<OnNotConnectedEvent>((event, emit) => emit(ConnectedFailureState()));
@@ -26,6 +27,7 @@ class ConnectedBloc extends Bloc<ConnectedEvent, ConnectedState> {
       }
     });
   }
+
   @override
   Future<void> close() {
     subscription?.cancel();

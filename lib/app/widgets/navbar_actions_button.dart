@@ -8,6 +8,7 @@ import 'package:provider/provider.dart';
 class NavBarActionButton extends StatefulWidget {
   final String label;
   final int index;
+
   const NavBarActionButton({
     Key? key,
     required this.label,
@@ -20,6 +21,7 @@ class NavBarActionButton extends StatefulWidget {
 
 class _NavBarActionButtonState extends State<NavBarActionButton> {
   bool isHover = false;
+
   @override
   Widget build(BuildContext context) {
     final scrollProvider = Provider.of<ScrollProvider>(context);

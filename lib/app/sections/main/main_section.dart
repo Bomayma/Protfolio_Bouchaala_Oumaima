@@ -1,29 +1,25 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mysite/app/utils/navbar_utils.dart';
+import 'package:mysite/app/utils/utils.dart';
 import 'package:mysite/app/widgets/arrow_on_top.dart';
-import 'package:mysite/app/widgets/color_chage_btn.dart';
-import 'package:mysite/changes/links.dart';
-import 'package:mysite/core/apis/links.dart';
+import 'package:mysite/app/widgets/navbar_logo.dart';
 import 'package:mysite/core/color/colors.dart';
 import 'package:mysite/core/configs/app.dart';
 import 'package:mysite/core/configs/configs.dart';
 import 'package:mysite/core/providers/drawer_provider.dart';
 import 'package:mysite/core/providers/scroll_provider.dart';
-import 'package:mysite/app/utils/navbar_utils.dart';
-import 'package:mysite/app/utils/utils.dart';
-import 'package:mysite/app/widgets/navbar_actions_button.dart';
-import 'package:mysite/app/widgets/navbar_logo.dart';
 import 'package:mysite/core/res/responsive.dart';
 import 'package:mysite/core/theme/cubit/theme_cubit.dart';
 import 'package:provider/provider.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
-import 'package:flutter/material.dart';
-import 'package:mysite/core/util/constants.dart';
 import 'package:sizer/sizer.dart';
-part 'widgets/_navbar_desktop.dart';
-part 'widgets/_mobile_drawer.dart';
+
 part 'widgets/_body.dart';
+part 'widgets/_mobile_drawer.dart';
+part 'widgets/_navbar_mobile.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -39,13 +35,9 @@ class MainPage extends StatelessWidget {
       extendBodyBehindAppBar: true,
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(120),
-        child: Responsive(
-          desktop: _NavbarDesktop(),
-          mobile: _NavBarTablet(),
-          tablet: _NavBarTablet(),
-        ),
+        child: Responsive(mobile: _NavBarMobile()),
       ),
-      drawer: !Responsive.isDesktop(context) ? const _MobileDrawer() : null,
+      drawer: const _MobileDrawer(),
       body: BlocBuilder<ThemeCubit, ThemeState>(
         builder: (context, state) {
           return Stack(
@@ -98,7 +90,7 @@ class MainPage extends StatelessWidget {
                   alignment: Alignment.center,
                   // BG01.png
                   child: Image.asset(
-                    'assets/imgs/5424482.JPG',
+                    'assets/imgs/5424482.jpg',
                     opacity: const AlwaysStoppedAnimation<double>(0.2),
                     width: width,
                     height: height,

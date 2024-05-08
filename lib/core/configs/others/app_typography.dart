@@ -8,8 +8,10 @@ class AppText {
   static TextStyle? h1;
   static TextStyle? h1b;
   static TextStyle? h2;
+
   // static TextStyle? h2b;
   static TextStyle? h3;
+
   // static TextStyle? h3b;
 
   // Body

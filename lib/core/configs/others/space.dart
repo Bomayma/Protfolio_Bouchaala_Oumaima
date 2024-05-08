@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+
 // import '../ui.dart';
 // import '../app_dimensions.dart';
 
 class Space {
   static Widget? x(double no) => SizedBox(width: no);
+
   static Widget? y(double no) => SizedBox(height: no);
   static Widget? x1;
+
   // static Widget? y1;
   // static Widget? x2;
   // static Widget? y2;
   static Widget? xm;
+
   // static Widget? ym;
 
   // static EdgeInsets? z;
@@ -50,19 +54,19 @@ class Space {
     // bottom = SizedBox(height: UI.padding!.bottom);
   }
 
-  // static Widget xf([double no = 1]) => SizedBox(width: AppDimensions.space(no));
-  // static Widget yf([double no = 1]) =>
-  //     SizedBox(height: AppDimensions.space(no));
+// static Widget xf([double no = 1]) => SizedBox(width: AppDimensions.space(no));
+// static Widget yf([double no = 1]) =>
+//     SizedBox(height: AppDimensions.space(no));
 
-  // static EdgeInsets hf([double no = 1]) => EdgeInsets.symmetric(
-  //       horizontal: AppDimensions.space(no),
-  // );
-  // static EdgeInsets vf([double no = 1]) => EdgeInsets.symmetric(
-  //       vertical: AppDimensions.space(no),
-  //     );
+// static EdgeInsets hf([double no = 1]) => EdgeInsets.symmetric(
+//       horizontal: AppDimensions.space(no),
+// );
+// static EdgeInsets vf([double no = 1]) => EdgeInsets.symmetric(
+//       vertical: AppDimensions.space(no),
+//     );
 
-  // static EdgeInsets all([double h = 0.5, double? v]) => EdgeInsets.symmetric(
-  //       vertical: AppDimensions.space(v ?? h),
-  //       horizontal: AppDimensions.space(h),
-  //     );
+// static EdgeInsets all([double h = 0.5, double? v]) => EdgeInsets.symmetric(
+//       vertical: AppDimensions.space(v ?? h),
+//       horizontal: AppDimensions.space(h),
+//     );
 }

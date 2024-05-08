@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mysite/changes/links.dart';
-import 'package:mysite/core/util/constants.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
@@ -13,19 +11,18 @@ class Footer extends StatelessWidget {
       margin: EdgeInsets.fromLTRB(0, height * 0.05, 0, 0),
       height: height * 0.07,
       width: width,
-      child: Center(
+      child: const Center(
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text("Developed by "),
+            Text("Developed by"),
             InkWell(
-              onTap: () => openURL(gitHub),
-              child: const Text(
-                " Sudesh Bandara 💙",
+              child: Text(
+                " Bouchaala Oumaima",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
-            const Text(" © 2022"),
+            Text("©2024"),
           ],
         ),
       ),
